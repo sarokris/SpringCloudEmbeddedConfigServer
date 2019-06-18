@@ -1,0 +1,12 @@
+spring :
+  application:
+    name : ConfigClient
+  profiles:
+    active: development
+  cloud:
+    config:
+      server: 
+        bootstrap : true
+        git :
+          uri : https://github.com/sarokris/SpringCloudConfig.git
+          
