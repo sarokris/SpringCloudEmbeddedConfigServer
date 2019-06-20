@@ -2,11 +2,17 @@ spring :
   application:
     name : ConfigClient
   profiles:
-    active: development
+    active: production
   cloud:
     config:
       server: 
         bootstrap : true
         git :
           uri : https://github.com/sarokris/SpringCloudConfig.git
-          
+management:
+  endpoints:
+    web:  
+      exposure:
+        include:
+          refresh
+         
